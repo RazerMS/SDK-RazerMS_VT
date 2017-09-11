@@ -6,36 +6,28 @@
 
 ## Prepare the Payment detail object base on your framework
 
-```
-var paymentDetails = {
-    // Mandatory String. A value more than '1.00'
-    'mp_amount': '1.1',
-    // Mandatory String. Values obtained from MOLPay
-    'mp_username': '',
-    'mp_password': '',
-    'mp_merchant_ID': '',
-    'mp_app_name': '',
-    'mp_verification_key': '',
+| key                   | value         |
+| --------------------- |:-------------:|
+| mp_app_return_url     | yourappurl:// |
+| mp_amount             | 1.1           |
+| mp_username           |               | 
+| mp_password           |               |
+| mp_merchant_ID        |               |
+| mp_app_name           |               |
+| mp_verification_key   |               |
+| mp_order_ID           | order123      |
+| mp_currency           | MYR           |
+| mp_country            | MY            |
+| mp_channel            | alipay        |
+| mp_bill_description   | test payment  |
+| mp_bill_name          | nick          |
+| mp_bill_email         | nick@email.com|
+| mp_bill_mobile        | 0111111111    |
 
-    // Mandatory String. Payment values
-    'mp_order_ID': '',
-    'mp_currency': 'MYR',
-    'mp_country': 'MY',
-
-    // Optional String.
-    'mp_channel': 'alipay', 
-    'mp_bill_description': 'test payment',
-    'mp_bill_name': 'anyname',
-    'mp_bill_email': 'example@email.com',
-    'mp_bill_mobile': '0161111111',
-    'mp_app_return_url' : "yourappurl://"
-};
-```
-
-## Convert above object to base64 and start payment by calling url
+## Start payment by calling url
 
 ```
-molpayvt://base64=`Base64String`
+molpayvt://mp_app_return_url=yourappurl://&mp_amount=1.00
 ```
 
 ## Sample Result
@@ -45,10 +37,7 @@ molpayvt://base64=`Base64String`
 Sample transaction result:
 =========================================
 
-yourappurl://base64=eyJhbW91bnQiOiIxMC4wMCIsIm9yZGVyaWQiOiIxOTI4MzY0IiwidHJhbklEIjoyMDQwMDE5NCwiZG9tYWluIjoibW9scGF5eGRrIiwic3RhdHVzIjoiMDAiLCJhcHBjb2RlIjoiIiwiZXJyb3JfY29kZSI6bnVsbCwiZXJyb3JfZGVzYyI6bnVsbCwic2tleSI6ImJlNjg1MTE0MDRkMmZjMTJjNzFmOWZlYzViZWE2YWMxIiwiY3VycmVuY3kiOiJNWVIiLCJjaGFubmVsIjoiQWxpcGF5LVNwb3QiLCJwYXlkYXRlIjoiMjAxNy0wOS0xMSAxMjowODowOSJ9
-
-Decoded base64
-{"amount":"10.00","orderid":"1928364","tranID":20400194,"domain":"molpayxdk","status":"00","appcode":"","error_code":null,"error_desc":null,"skey":"be68511404d2fc12c71f9fec5bea6ac1","currency":"MYR","channel":"Alipay-Spot","paydate":"2017-09-11 12:08:09"}
+yourappurl://amount=1.00&orderid=1928364&tranid=20422775&domain=molpaymerchant&status=00&appcode=&error_code=null&error_desc=null&skey=921820ca098a57444413bd577e7fc0bf&currency=MYR&channel=Alipay-Spot&paydate=2017-09-11%2016:40:37
 
 Parameter and meaning:
 
@@ -65,9 +54,7 @@ Parameter and meaning:
 * Sample error result:
 =====================================
 
-yourappurl://base64=eyJFcnJvciI6Ik5vIG9yZGVyIGlkIGZvdW5kISJ9
+yourappurl://Error=No%20order%20id%20found!
 
-Decoded base64
-{"Error":"No order id found!"}
 ```
 
