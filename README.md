@@ -6,28 +6,28 @@
 
 ## Prepare the Payment detail object base on your framework
 
-| key                   | value         |
-| --------------------- |:-------------:|
-| mp_app_return_url     | yourappurl:// |
-| mp_amount             | 1.1           |
-| mp_username           |               | 
-| mp_password           |               |
-| mp_merchant_ID        |               |
-| mp_app_name           |               |
-| mp_verification_key   |               |
-| mp_order_ID           | order123      |
-| mp_currency           | MYR           |
-| mp_country            | MY            |
-| mp_channel            | alipay        |
-| mp_bill_description   | test payment  |
-| mp_bill_name          | nick          |
-| mp_bill_email         | nick@email.com|
-| mp_bill_mobile        | 0111111111    |
+| Key                   | Value         | Description                       |
+| --------------------- |:-------------:| --------------------------------- |
+| mp_app_return_url     | yourappurl:// | Your app url to return data       |
+| mp_amount             | 1.1           | Payment amount from merchant      |
+| mp_username           | api_username  | Values obtained from MOLPay       |
+| mp_password           | api_password  | Values obtained from MOLPay       |
+| mp_merchant_ID        | molpay_ID     | MOLPay merchant ID                |
+| mp_app_name           | myapp         | Values obtained from MOLPay       |
+| mp_verification_key   | 123456abcd    | Values obtained from MOLPay       |
+| mp_order_ID           | order123      | Order ID from merchant            |
+| mp_currency           | MYR           | Acceptance currency               |
+| mp_country            | MY            | Country                           |
+| mp_channel            | alipay        | Channel                           |
+| mp_bill_description   | test payment  | Billing description (Optional)    |
+| mp_bill_name          | nick          | Billing name (Optional)           |
+| mp_bill_email         | nick@email.com| Billing email (Optional)          |
+| mp_bill_mobile        | 0111111111    | Billing mobile phone no (Optional)|
 
 ## Start payment by calling url
 
 ```
-molpayvt://mp_app_return_url=yourappurl://&mp_amount=1.00
+molpayvt://mp_app_return_url=yourappurl://&mp_amount=1.00&mp_username=api_username&mp_password=api_password&mp_merchant_ID=molpay_ID&mp_app_name=myapp&mp_verification_key=123456abcd&mp_order_ID=order123&mp_currency=MYR&mp_country=MY&mp_channel=alipay&mp_bill_description=test%20payment&mp_bill_name=nick&mp_bill_email=nick@email.com&mp_bill_mobile=0111111111
 ```
 
 ## Sample Result
