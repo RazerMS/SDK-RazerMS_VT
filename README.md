@@ -9,7 +9,7 @@
 | Key                   | Value         | Description                       |
 | --------------------- |:-------------:| --------------------------------- |
 | mp_app_return_url     | yourappurl:// | Your app url to return data       |
-| mp_amount             | 1.1           | Payment amount from merchant      |
+| mp_amount             | 1.10          | Payment amount from merchant      |
 | mp_username           | api_username  | Values obtained from MOLPay       |
 | mp_password           | api_password  | Values obtained from MOLPay       |
 | mp_merchant_ID        | molpay_ID     | MOLPay merchant ID                |
@@ -27,7 +27,9 @@
 ## Start payment by calling url
 
 ```
-molpayvt://mp_app_return_url=yourappurl://&mp_amount=1.00&mp_username=api_username&mp_password=api_password&mp_merchant_ID=molpay_ID&mp_app_name=myapp&mp_verification_key=123456abcd&mp_order_ID=order123&mp_currency=MYR&mp_country=MY&mp_channel=alipay&mp_bill_description=test%20payment&mp_bill_name=nick&mp_bill_email=nick@email.com&mp_bill_mobile=0111111111
+Note : URL is recommended convert to safe url to escape special character
+
+molpayvt://mp_app_return_url=yourappurl://&mp_amount=1.10&mp_username=api_username&mp_password=api_password&mp_merchant_ID=molpay_ID&mp_app_name=myapp&mp_verification_key=123456abcd&mp_order_ID=order123&mp_currency=MYR&mp_country=MY&mp_channel=alipay&mp_bill_description=test%20payment&mp_bill_name=nick&mp_bill_email=nick@email.com&mp_bill_mobile=0111111111
 ```
 
 ## Sample Result
@@ -37,7 +39,7 @@ molpayvt://mp_app_return_url=yourappurl://&mp_amount=1.00&mp_username=api_userna
 Sample transaction result:
 =========================================
 
-yourappurl://amount=1.00&orderid=1928364&tranid=20422775&domain=molpaymerchant&status=00&appcode=&error_code=null&error_desc=null&skey=921820ca098a57444413bd577e7fc0bf&currency=MYR&channel=Alipay-Spot&paydate=2017-09-11%2016:40:37
+yourappurl://amount=1.10&orderid=1928364&tranid=20422775&domain=molpaymerchant&status=00&appcode=&error_code=null&error_desc=null&skey=921820ca098a57444413bd577e7fc0bf&currency=MYR&channel=Alipay-Spot&paydate=2017-09-11%2016:40:37
 
 Parameter and meaning:
 
