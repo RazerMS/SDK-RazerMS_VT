@@ -8,7 +8,7 @@
 
 | Key                   | Sample value  | Description                       |
 | --------------------- |:-------------:| --------------------------------- |
-| mp_app_return_url     | yourappurl    | Your app url to return data       |
+| mp_url_scheme         | yourappurl    | Your app url to return data       |
 | mp_amount             | 1.10          | Payment amount from merchant      |
 | mp_merchant_ID        | yourmerchantID| MOLPay merchant ID                |
 | mp_verification_key   | 123456abcd    | Values obtained from MOLPay       |
@@ -24,7 +24,7 @@
 ```
 Note : URL is recommended convert to safe url to escape special character
 
-molpayvt://mp_app_return_url=yourappurl&mp_amount=1.10mp_merchant_ID=yourmerchantID&mp_verification_key=123456abcd&mp_order_ID=order123mp_channel=alipayspot&mp_bill_description=test payment&mp_bill_name=nick&mp_bill_email=nick@email.com&mp_bill_mobile=0111111111
+molpayvt://mp_url_scheme=yourappurl&mp_amount=1.10mp_merchant_ID=yourmerchantID&mp_verification_key=123456abcd&mp_order_ID=order123mp_channel=alipayspot&mp_bill_description=test payment&mp_bill_name=nick&mp_bill_email=nick@email.com&mp_bill_mobile=0111111111
 ```
 
 ## Sample Result
