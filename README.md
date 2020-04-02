@@ -24,7 +24,7 @@
 ```
 Note : URL is recommended convert to safe url to escape special character
 
-molpayvt://mp_url_scheme=yourappurl&mp_amount=1.10mp_merchant_ID=yourmerchantID&mp_verification_key=123456abcd&mp_order_ID=order123&mp_channel=alipayspot&mp_bill_description=test payment&mp_bill_name=nick&mp_bill_email=nick@email.com&mp_bill_mobile=0111111111
+molpayvt://mp_url_scheme=yourappurl&mp_amount=1.10&mp_merchant_ID=yourmerchantID&mp_verification_key=123456abcd&mp_order_ID=order123&mp_channel=alipayspot&mp_bill_description=test payment&mp_bill_name=nick&mp_bill_email=nick@email.com&mp_bill_mobile=0111111111
 ```
 
 ## Sample Result
@@ -54,4 +54,9 @@ Parameter and meaning:
 yourappurl://Error=No%20order%20id%20found!
 
 ```
+## Procedure
 
+```
+1. VT app's must be login state (VT app's can be put in background mode).
+2. Start payment by calling the url.
+```
