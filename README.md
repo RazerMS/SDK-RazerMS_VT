@@ -60,3 +60,19 @@ yourappurl://Error=No%20order%20id%20found!
 1. VT app's must be login state (VT app's can be put in background mode).
 2. Start payment by calling the url.
 ```
+
+## Channel list
+| Channel name          | mp_channel        | Remarks       |
+| --------------------- | ----------------- | ------------- |
+| Credit / Debit Card   | paynow            |               |
+| Razer Pay             | one2pay           |               |
+| Ali Pay               | alipayspot        |               |
+| WeChat Pay            | wechatpay         |               |
+| Boost                 | boost             |               |
+| TNG eWallet           | touchngo          |               |
+| Maybank QR Pay        | maybankqrpay      |               |
+| Grab Pay              | grabpay           |               |
+| E-mail                | email             | Payment link  |
+| SMS                   | sms               | Payment link  |
+| QR Code               | qrcode            | Payment link  |
+| Share Link            | sharelink         | Payment link  |
