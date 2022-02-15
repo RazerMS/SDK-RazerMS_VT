@@ -1,4 +1,5 @@
 # [Mobile SDK] – RazerMS VT mobile app integration
+<img src="https://user-images.githubusercontent.com/38641542/74423739-b4440a00-4e8b-11ea-8d95-016d25d26e87.jpg">
 
 ## Installation Guidance
 
